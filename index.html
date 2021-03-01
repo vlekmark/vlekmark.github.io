@@ -6,11 +6,15 @@
   <body style="margin : 0px; height: 100%; width: 100%; overflow: hidden;">
     <a-scene embedded arjs>
 		<a-assets>
-			<a-asset-item id="tree" src="2CylinderEngine.gltf"></a-asset-item>
+			<a-asset-item 
+			id="shoe"
+			scale="0.05 0.05 0.05"			
+			src="MaterialsVariantsShoe/glTF/MaterialsVariantsShoe.gltf"
+			></a-asset-item>
 		</a-assets>
 		
 		<a-marker preset="hiro">
-			<a-gltf-model src="#tree"></a-gltf-model>
+			<a-gltf-model src="#shoe"></a-gltf-model>
 		</a-marker>
 		<a-entity camera></a-entity>
     </a-scene>
