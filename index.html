@@ -5,14 +5,14 @@
   <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
   <body style="margin : 0px; height: 100%; width: 100%; overflow: hidden;">
     <a-scene embedded arjs>
-      <a-marker preset="hiro">
-        <a-entity
-          position="50 150 0"
-          scale="0.05 0.05 0.05"
-          gltf-model-legacy="MaterialsVariantsShoe/glTF/MaterialsVariantsShoe.gltf"
-        ></a-entity>
-      </a-marker>
-      <a-entity camera></a-entity>
+		<a-assets>
+			<a-asset-item id="tree" src="2CylinderEngine.gltf"></a-asset-item>
+		</a-assets>
+		
+		<a-marker preset="hiro">
+			<a-gltf-model src="#tree"></a-gltf-model>
+		</a-marker>
+		<a-entity camera></a-entity>
     </a-scene>
   </body>
 </html>
