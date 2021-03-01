@@ -7,14 +7,13 @@
     <a-scene embedded arjs>
 		<a-assets>
 			<a-asset-item 
-			id="shoe"
-			scale="1 1 1"			
+			id="shoe"		
 			src="MaterialsVariantsShoe/glTF/MaterialsVariantsShoe.gltf"
 			></a-asset-item>
 		</a-assets>
 		
 		<a-marker preset="hiro">
-			<a-gltf-model src="#shoe"></a-gltf-model>
+			<a-entity scale="10 10 10" gltf-model="#shoe" ></a-entity>
 		</a-marker>
 		<a-entity camera></a-entity>
     </a-scene>
