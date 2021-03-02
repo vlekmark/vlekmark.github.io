@@ -1,8 +1,28 @@
 <!DOCTYPE html>
 <html>
-  <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
   <!-- we import arjs version without NFT but with marker + location based support -->
   <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+  <script>
+	AFRAME.registerComponent('modify-materials', {
+    init: function () {
+      // Wait for model to load.
+	  console.log(this.el);
+      this.el.addEventListener('model-loaded', () => {
+        // Grab the mesh / scene.
+        const obj = this.el.getObject3D('mesh');
+		console.log(obj);
+        // Go over the submeshes and modify materials we want.
+        obj.traverse(node => {
+			console.log(node);
+          /*if (node.name.indexOf('ship') !== -1) {
+            node.material.color.set('red');
+          }*/
+        });
+      });
+    }
+  });
+  </script>
   <body style="margin : 0px; height: 100%; width: 100%; overflow: hidden;">
     <a-scene embedded arjs>
 		<a-assets>
