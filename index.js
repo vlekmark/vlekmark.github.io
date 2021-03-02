@@ -7,7 +7,10 @@ AFRAME.registerComponent('change-material', {
 			obj.traverse(node => {
 				if (node.isMesh) {
 					// This is Shoe Mesh
-					node.material.map = new THREE.TextureLoader().load("MaterialsVariantsShoe/glTF/diffuseBeach.jpg");
+					let button = document.getElementById('button');
+					button.addEventListener('click', () => {
+						node.material.map = new THREE.TextureLoader().load("MaterialsVariantsShoe/glTF/diffuseBeach.jpg");
+					});
 				};
 			});
 		});
