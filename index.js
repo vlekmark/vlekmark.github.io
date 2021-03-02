@@ -6,26 +6,26 @@ AFRAME.registerComponent('modify-materials', {
 			obj.traverse(node => {
 				if (node.name === "Shoe") {
 					console.log(node.material);
-/*					try {
+					/*try {
 						node.material.set(1);
 						console.log('set mat 1');
 					} catch {
 						(e => console.warn('cant do that'+ e));
-					};
+					};*/
 
-					try {
+					/*try {
 						node.material = 1;
 						console.log('set mat 2');
 					} catch {
 						(e => console.warn('cant do that' + e));
-					};*/
+					};
 
 					try {
 						node.material.color.set('red');
 						console.log('set col 1');
 					} catch {
 						(e => console.warn('cant do that' + e));
-					};
+					};*/
 				}
 			});
 		});
