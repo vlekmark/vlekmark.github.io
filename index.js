@@ -4,13 +4,12 @@ AFRAME.registerComponent('modify-materials', {
 			const obj = this.el.getObject3D('mesh');
 			// Go over the submeshes and modify materials we want.
 			obj.traverse(node => {
-				console.log(node.name);
+				console.log(node);
 				
 
-				if (node.name === "shoe") {
-					console.log(node.primitives[0].material);
-
+				if (node.name.trim() == "Shoe") {
 					try {
+						console.log(node.primitives[0].material);
 						node.primitives[0].material = 1;
 					} catch {
 						(e => console.warn(e));
