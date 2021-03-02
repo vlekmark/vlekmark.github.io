@@ -2,20 +2,24 @@ AFRAME.registerComponent('change-material-on-click', {
 	schema: {
 		target: { type: 'selector' }
 	},
-
 	init: function () {
-		this.el.addEventListener('model-loaded', () => this.update());
+		let el = this.el;  // Element to add click listener.
+		el.addEventListener('model-loaded', () => this.update());
+
+		el.addEventListener('click', () => {
+
+		});
 	},
 	update: function () {
 		let targetEl = this.data.target;  // Target to change material.
-		console.log(targetEl)
+		console.log(targetEl);
 		console.log('further')
 		let mesh = targetEl.getObject3D('mesh');
 		console.log(mesh)
+		console.log('further')
 		mesh.traverse(node => {
-			console.log(node)
-			if (node.name === "Shoe") {
-				console.log(node)
+			if (node.isMesh) {
+				node.material = targetEl.material;
 			};
 		});
 	}
