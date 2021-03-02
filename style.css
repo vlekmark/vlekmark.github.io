@@ -1,12 +1,12 @@
 /* phones portrait*/
 #button {
     position: absolute;
-    bottom: 5%;
+    bottom: 10%;
     right: 5%;
     width: 90vw;
     height: 15vh;
-    border-radius: 24vw;
-    font-size: 2vw;
+    border-radius: 4vw;
+    font-size: 5vw;
     background-image: linear-gradient(60deg, #666666,#EEEEEE);
     z-index: 99999;
     opacity: 0.6;
@@ -14,11 +14,11 @@
 }
 
 /* phones landscape*/
-@media only screen and (orientation: landscape) {
+@media only screen and (max-width: 767px) and (orientation: landscape) {
     #button {
         position: absolute;
         bottom: 20%;
-        right: 5%;
+        right: 2%;
         width: 12vw;
         height: 12vw;
         border-radius: 24vw;
@@ -31,7 +31,7 @@
 }
 
 /* Tablets */
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 768px) {
     #button {
         position: absolute;
         bottom: 10%;
