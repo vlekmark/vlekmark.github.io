@@ -1,10 +1,10 @@
 /* phones*/
 #button {
     position: absolute;
-    bottom: 25%;
-    right: 10%;
-    width: 12vw;
-    height: 12vw;
+    bottom: 5%;
+    right: 5%;
+    width: 90vw;
+    height: 15vh;
     border-radius: 24vw;
     font-size: 2vw;
     background-image: linear-gradient(60deg, #666666,#EEEEEE);
@@ -17,10 +17,10 @@
 @media only screen and (min-width: 600px) {
     #button {
         position: absolute;
-        bottom: 25%;
-        right: 10%;
-        width: 12vw;
-        height: 12vw;
+        bottom: 10%;
+        right: 5%;
+        width: 16vw;
+        height: 16vw;
         border-radius: 24vw;
         font-size: 2vw;
         background-image: linear-gradient(60deg, #666666,#EEEEEE);
