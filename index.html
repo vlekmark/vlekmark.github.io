@@ -9,6 +9,7 @@
 
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+    <script src="index.js" type="text/javascript"></script>
 </head>
 <body>
 
@@ -18,12 +19,9 @@
         </a-assets>
 
         <a-marker preset="hiro">
-            <a-entity scale="10 10 10" gltf-model="#shoe-asset" id="shoe" change-material-on-click></a-entity>
+            <a-entity scale="10 10 10" gltf-model="#shoe-asset" change-material-on-click></a-entity>
         </a-marker>
         <a-entity camera></a-entity>
-        <!--<a-image change-material-on-click="target: #shoe"></a-image>-->
     </a-scene>
-
-    <script src="index.js" type="text/javascript"></script>
 </body>
 </html>
