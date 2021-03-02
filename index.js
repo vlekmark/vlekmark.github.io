@@ -1,33 +1,19 @@
-AFRAME.registerComponent('modify-materials', {
+AFRAME.registerComponent('change-material-on-click', {
+	schema: {
+		target: { type: 'selector' }
+	},
+
 	init: function () {
-		this.el.addEventListener('model-loaded', () => {
-			const obj = this.el.getObject3D('mesh');
-			// Go over the submeshes and modify materials we want.
-			obj.traverse(node => {
+		let el = this.el;  // Element to add click listener.
+		let targetEl = this.data.target;  // Target to change material.
+		console.log(targetEl)
+		el.addEventListener('click', function () {
+			let mesh = targetEl.getObject3D('mesh');
+			mesh.traverse(node => {
 				if (node.name === "Shoe") {
-					/*console.log(node.material);*/
-					/*try {
-						node.material.set(1);
-						console.log('set mat 1');
-					} catch {
-						(e => console.warn('cant do that'+ e));
-					};*/
-
-					/*try {
-						node.material = 1;
-						console.log('set mat 2');
-					} catch {
-						(e => console.warn('cant do that' + e));
-					};
-
-					try {
-						node.material.color.set('red');
-						console.log('set col 1');
-					} catch {
-						(e => console.warn('cant do that' + e));
-					};*/
-				}
+					console.log(node)
+				};
 			});
 		});
-    }
+	}
 });
