@@ -11,17 +11,17 @@
     <script src="index.js" type="text/javascript"></script>
 </head>
 <body style="margin : 0px; overflow: hidden;">
-    <a-scene  renderer='antialias: true; alpha: true; precision: mediump;'
-              embedded arjs='trackingMethod: best; sourceType: webcam; debugUIEnabled: false;'>
+    <a-scene renderer='antialias: true; alpha: true; precision: medium;'
+             embedded arjs='trackingMethod: best; sourceType: webcam;'>
         <a-assets>
             <a-asset-item id="shoe-asset" src="MaterialsVariantsShoe/glTF/MaterialsVariantsShoe.gltf"></a-asset-item>
         </a-assets>
 
         <a-marker preset="hiro">
-            <a-entity scale="10 10 10" gltf-model="#shoe-asset" change-material></a-entity>
+            <a-entity scale="6 6 6" gltf-model="#shoe-asset" change-material></a-entity>
         </a-marker>
         <a-entity camera></a-entity>
-        <button id="button">Click me to change Material</button>
     </a-scene>
+    <button id="button">Click me to change Material</button>
 </body>
 </html>
