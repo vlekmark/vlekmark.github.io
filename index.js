@@ -6,8 +6,8 @@ AFRAME.registerComponent('change-material', {
 
 			obj.traverse(node => {
 				if (node.isMesh) {
-					node.material = this.material;
-					console.log(this.material)
+					// This is Shoe Mesh
+					node.material.map = new THREE.TextureLoader().load("MaterialsVariantsShoe/glTF/diffuseBeach.jpg");
 				};
 			});
 		});
