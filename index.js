@@ -13,7 +13,8 @@ AFRAME.registerComponent('change-material-on-click', {
 	update: function () {
 		let targetEl = this.data.target;  // Target to change material.
 		let mesh = targetEl.getObject3D('mesh');
-		console.log(mesh)
+		console.log(targetEl)
+		console.log(this.data)
 		mesh.traverse(node => {
 			if (node.isMesh) {
 				node.material = targetEl.material;
