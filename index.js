@@ -6,10 +6,20 @@ AFRAME.registerComponent('change-material', {
 
 			obj.traverse(node => {
 				if (node.isMesh) {
-					// This is Shoe Mesh
+
 					let button = document.getElementById('button');
+
+					let materials = ["diffuseMidnight.jpg", "diffuseBeach.jpg", "diffuseStreet.jpg"];
+					let i = 0;
+					let j = materials.length;
+
 					button.addEventListener('click', () => {
-						node.material.map = new THREE.TextureLoader().load("MaterialsVariantsShoe/glTF/diffuseBeach.jpg");
+
+						// cycle materials on click, reset on end
+						i++;
+						if (i === j) i = 0;
+
+						node.material.map = new THREE.TextureLoader().load(`MaterialsVariantsShoe/glTF/${materials[i]}`);
 					});
 				};
 			});
