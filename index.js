@@ -1,27 +1,16 @@
-/*AFRAME.registerComponent('change-material-on-click', {
-	*//*schema: {
-		target: { type: 'selector' }
-	},*//*
+AFRAME.registerComponent('change-material', {
 	init: function () {
-		//console.log(this.el)
-		//console.log(this.data)
-		//console.log(this.data.target)
-		this.el.addEventListener('model-loaded', () => this.update());
+		this.el.addEventListener('model-loaded', () => {
+			const obj = this.el.getObject3D('mesh');
+			if (!obj) return;
 
-		*//*el.addEventListener('click', () => {
-
-		});*//*
-	},
-	update: function () {
-		//let targetEl = this.data.target;  // Target to change material.
-		let object = this.el.getObject3D('mesh');
-		if (!object) return;
-		object.traverse(node => {
-			console.log(node);
-			if (node.isMesh) {
-				//node.material = targetEl.material;
-				console.log(targetEl.material)
-			};
+			obj.traverse(node => {
+				console.log(node);
+				if (node.isMesh) {
+					//node.material = targetEl.material;
+					console.log(node)
+				};
+			});
 		});
 	}
-});*/
+});
