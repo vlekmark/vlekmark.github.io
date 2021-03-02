@@ -5,7 +5,7 @@ AFRAME.registerComponent('modify-materials', {
 			// Go over the submeshes and modify materials we want.
 			obj.traverse(node => {
 				if (node.name === "Shoe") {
-					console.log(node.material);
+					/*console.log(node.material);*/
 					/*try {
 						node.material.set(1);
 						console.log('set mat 1');

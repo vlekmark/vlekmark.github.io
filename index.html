@@ -15,10 +15,11 @@
     <a-scene embedded arjs>
         <a-assets>
             <a-asset-item id="shoe" src="MaterialsVariantsShoe/glTF/MaterialsVariantsShoe.gltf"></a-asset-item>
+            <img id="beach-texture" src="MaterialsVariantsShoe/glTF/diffuseBeach.jpg">
         </a-assets>
 
         <a-marker preset="hiro">
-            <a-entity scale="10 10 10" gltf-model="#shoe" material="src: MaterialsVariantsShoe/glTF/diffuseBeach.jpg" modify-materials></a-entity>
+            <a-entity scale="10 10 10" gltf-model="#shoe" material="src: #beach-texture" modify-materials></a-entity>
         </a-marker>
         <a-entity camera></a-entity>
     </a-scene>
